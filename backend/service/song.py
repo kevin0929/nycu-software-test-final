@@ -28,7 +28,7 @@ def get_search_results(song_name: str):
     latest_searched_at = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
 
     results = []
-    for hit in hits:
+    for hit in best:
         result = hit["result"]
         title = result.get("title") or "Unknown Title"
         artist = result.get("primary_artist", {}).get("name") or "Unknown Artist"

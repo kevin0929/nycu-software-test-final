@@ -46,6 +46,7 @@ def generate_lyric_card(lyrics: str) -> str:
     4. 請以 JSON array 的格式輸出 \n
     5. 不要有其他額外的輸出，'```JSON' 也不要 \n
     6. 請挑選出 10 個卡片就好，N3 ~ N5 可以多一點 \n
+    7. Difficulty 的難度判斷限定在三個等級: N4~N5, N3, N1~N2，如果認為此單字為 N5 等級，difficulty 輸出 N4 ~ N5 \n
 
     歌詞內容如下: \n
     {lyrics}

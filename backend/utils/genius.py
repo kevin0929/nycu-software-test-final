@@ -61,13 +61,13 @@ def scrape_genius_lyrics(song_url: str) -> str:
 
 
 def pick_best_original_hit(hits):
+    filtered = []
     for hit in hits:
         result = hit.get("result", {})
         artist = (result.get("primary_artist") or {}).get("name", "")
         if "Genius" in artist.lower():
-            continue
-        return hit
-    return None
+            filtered.append(hit)
+    return filtered
 
 def clean_lyrics_genius(raw: str) -> str:
     s = raw
